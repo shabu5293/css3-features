@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variable</title>
+    <style>
+        /* If i create and change the color, font size or any other custom property name from root, the color will automatic change everywhere i use it */
+        :root{
+            --primary-color:steelblue;
+            --secondary-color:blue;
+            --font-size:20px;
+        }
+
+        h1{
+            /* color: steelblue; */
+            color: var(--primary-color);
+        }
+        h5{
+            /* background-color: steelblue; */
+            background-color: var(--primary-color);
+        }
+        .box{
+            border: 2px solid var(--primary-color);
+        }
+        .box p{
+            /* color: blue; */
+            color: var(--secondary-color);
+            font-size: var(--font-size);
+        }
+    </style>
+</head>
+<body>
+    <h1>My Custom Properties</h1>
+    <h5>Also commonly known as CSS variables</h5>
+    <div class="box">
+        <h3>I am doing something</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eligendi ut quam tempora asperiores aut aliquid quasi officia nobis at, voluptatibus iste molestiae reprehenderit qui animi dolor iusto, rerum necessitatibus?</p>
+    </div>
+</body>
+</html>
